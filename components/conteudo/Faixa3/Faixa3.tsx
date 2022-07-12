@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 import Container from "@/components/ui/containers/Container";
-import { Coluna7, Colunas } from "@/components/ui/colunas/Colunas";
+import { Coluna2, Coluna5, Colunas } from "@/components/ui/colunas/Colunas";
 import ButtonPulse from "@/components/ui/buttons/ButtonPulse";
 
 import {
-  Faixa3Conteudo, Faixa3Lista, Faixa3ListaItem, Faixa3ListaItemIcone, Faixa3ListaItemTexto, Faixa3Texto, Faixa3Titulo, Faixa3Video, Faixa3Wrapper
+  Faixa3Conteudo, Faixa3LogoGrupoMagnet, Faixa3Texto, Faixa3Titulo, Faixa3Video, Faixa3Wrapper
 } from "./Styles";
 import { ButtonWrapper } from "../Faixa1/Styles";
 
@@ -14,83 +14,59 @@ type Props = {
 }
 
 function Faixa3({ callForm }: Props) {
-  const itens = [
-    {
-      id: 1,
-      texto: "3 milhões <br />de clientes <br />por ano"
-    },
-    {
-      id: 2,
-      texto: "280 <br />colaboradores"
-    },
-    {
-      id: 3,
-      texto: "25 lojas <br />no Rio <br />de janeiro"
-    },
-  ];
-
   return (
     <Faixa3Wrapper>
       <Container>
         <Colunas>
-          <Coluna7>
+          <Coluna2 />
+          <Coluna5>
             <Faixa3Conteudo>
               <Faixa3Titulo fontColor="primary" margem="0 0 2rem">
-                A ESCOVEI É
-                {" "}
-                <strong>
-                  MARCA
-                  {" "}
-                  <br />
-                  RECONHECIDA EM ALIMENTAÇÃO
-                  {" "}
-                  <br />
-                  SAUDÁVEL E AÇAÍ
-                </strong>
-                {" "}
-                NO RIO DE JANEIRO!
+                CONHEÇA A ESCOVEI!
               </Faixa3Titulo>
               <Faixa3Texto>
-                Quando uma empresa é administrada e operada com seriedade e comprometimento pela própria família, o sucesso é certo! Há 25 anos, a família Wolfram abriu sua primeira unidade no RJ e, desde então, vem conquistando mais clientes, que elegeram o nosso açaí como o <strong>“melhor do Rio de Janeiro”</strong>!
+                A Escovei foi inspirada na Casa de Estilistas da Rússia, com foco em oferecer serviços de alto padrão e qualidade a todos que procuram elevar sua autoestima!
+              </Faixa3Texto>
+              <Faixa3Texto>
+                Nascida de um sonho das sócias, Janaína e Vanessa, a Escovei possui conceito único de atendimento rápido com padrões pré-definidos e preços fixos, em um ambiente leve e relaxante.
+              </Faixa3Texto>
+              <Faixa3Texto>
+                Agora, fazendo parte do Grupo Magnet, estamos em processo de expansão, com a meta de levar beleza e autocuidado para todos os cantos do Brasil!
               </Faixa3Texto>
 
-              <Faixa3Lista>
-                {
-                  itens.map((item, index) => (
-                    <Faixa3ListaItem key={index}>
-                      <Faixa3ListaItemIcone>
-                        <Image
-                          src="/images/icone-check.png"
-                          width="52"
-                          height="52"
-                        />
-                      </Faixa3ListaItemIcone>
-
-                      <Faixa3ListaItemTexto dangerouslySetInnerHTML={{ __html: item.texto }} />
-                    </Faixa3ListaItem>
-                  ))
-                }
-              </Faixa3Lista>
+              <Faixa3LogoGrupoMagnet>
+                <Image
+                  src="/images/faixa3/logo-grupo-magnet.png"
+                  width="284"
+                  height="41"
+                />
+              </Faixa3LogoGrupoMagnet>
 
               <Faixa3Video>
-                <video width="320" height="240" controls>
-                  <source src="/videos/video.mp4" type="video/mp4" />
-                  <track kind="captions" />
-                </video>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/T5Px95nuB3Q?t=2s"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               </Faixa3Video>
 
               <ButtonWrapper>
                 <ButtonPulse
-                  backColor="primary"
-                  fontColor="white"
-                  backPulse="primary"
+                  backColor="white"
+                  fontColor="black"
+                  backPulse="white"
                   onClick={() => callForm()}
                 >
                   <span>SEJA UM FRANQUEADO!</span>
                 </ButtonPulse>
               </ButtonWrapper>
             </Faixa3Conteudo>
-          </Coluna7>
+          </Coluna5>
+          <Coluna5 />
         </Colunas>
       </Container>
     </Faixa3Wrapper>

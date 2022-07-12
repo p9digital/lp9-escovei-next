@@ -6,11 +6,8 @@ import { ButtonWrapper } from "../Faixa1/Styles";
 import { FormMobile } from "@/pages";
 
 export const Faixa5Wrapper = styled(FaixaWrapperSimples)`
-background-image: url("/images/faixa5/background1.png"), url("/images/faixa5/background2.png");
-background-position: bottom left, top right;
-background-repeat: no-repeat;
-margin-top:-1px;
-padding-bottom:0;
+background:url("/images/faixa5/background.jpg") no-repeat center center;
+background-size:cover;
 position:relative;
 z-index:2;
 
@@ -52,6 +49,11 @@ display:flex;
 flex-direction:column;
 gap:2rem;
 margin-bottom:5rem;
+`;
+
+export const Faixa5Modelo = styled.div`
+margin:auto;
+width:387px;
 `;
 
 export const Faixa5FormMobile = styled(FormMobile)`

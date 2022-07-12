@@ -1,13 +1,11 @@
-import Image from "next/image";
-
 import Container from "@/components/ui/containers/Container";
 import ButtonPulse from "@/components/ui/buttons/ButtonPulse";
 
 import { ButtonWrapper } from "../Faixa1/Styles";
 import {
-  Faixa2Wrapper, Faixa2Texto, Faixa2Titulo, ListaItens, SeloContainer, Faixa2ImagensWrapper, CoposAcaiContainer, Faixa2TextoImagem, TijelaAcaiWrapper
+  Faixa2Wrapper, Faixa2Texto, Faixa2Titulo, ListaItens
 } from "./Styles";
-import { Coluna5, Coluna7, Colunas } from "@/components/ui/colunas/Colunas";
+import { Coluna7, Colunas } from "@/components/ui/colunas/Colunas";
 import { FormMobile } from "@/pages";
 import FormularioHome from "@/components/formulario/FormularioHome";
 import { ListaItem } from "@/components/ui/listas/ListaItem";
@@ -20,39 +18,39 @@ function Faixa2({ callForm }: Props) {
   const listaIcones = [
     {
       id: 1,
-      icone: "/images/faixa2/icone1.png",
-      iconeSize: { height: "37", width: "41" },
-      texto: "Investimento a partir de R$ 150 mil"
+      icone: "/images/faixa2/icone-check.png",
+      iconeSize: { height: "26", width: "26" },
+      texto: "Investimento a partir de R$ 210 mil"
     },
     {
       id: 2,
-      icone: "/images/faixa2/icone2.png",
-      iconeSize: { height: "39", width: "37" },
-      texto: "Fabricação própria de alimentos e fornecedores homologados"
+      icone: "/images/faixa2/icone-check.png",
+      iconeSize: { height: "26", width: "26" },
+      texto: "Suporte completo ao franqueado"
     },
     {
       id: 3,
-      icone: "/images/faixa2/icone3.png",
-      iconeSize: { height: "39", width: "35" },
-      texto: "Suporte completo no início até o dia a dia do negócio"
+      icone: "/images/faixa2/icone-check.png",
+      iconeSize: { height: "26", width: "26" },
+      texto: "Lucre com a venda de produtos de marca própria"
     },
     {
       id: 4,
-      icone: "/images/faixa2/icone4.png",
-      iconeSize: { height: "38", width: "38" },
-      texto: "Produtos de qualidade com ótimo custo benefício"
+      icone: "/images/faixa2/icone-check.png",
+      iconeSize: { height: "26", width: "26" },
+      texto: "Alta rotatividade de clientes"
     },
     {
       id: 5,
-      icone: "/images/faixa2/icone5.png",
-      iconeSize: { height: "40", width: "28" },
-      texto: "Cardápio variado e que atende aos diversos tipos de clientes o dia todo"
+      icone: "/images/faixa2/icone-check.png",
+      iconeSize: { height: "26", width: "26" },
+      texto: "Preços competitivos e alta procura"
     },
     {
       id: 6,
-      icone: "/images/faixa2/icone6.png",
-      iconeSize: { height: "41", width: "41" },
-      texto: "Treinamentos especializados para o franqueado e sua equipe"
+      icone: "/images/faixa2/icone-check.png",
+      iconeSize: { height: "26", width: "26" },
+      texto: "Centro de treinamentos específicos para a equipe"
     },
   ];
 
@@ -61,82 +59,42 @@ function Faixa2({ callForm }: Props) {
       <Container>
         <Colunas>
           <Coluna7>
-            <Faixa2ImagensWrapper>
-              <CoposAcaiContainer>
-                <Image
-                  src="/images/faixa2/copos-acai.png"
-                  alt="Copos Açaí"
-                  layout="responsive"
-                  width="328"
-                  height="379"
-                />
-              </CoposAcaiContainer>
-              <SeloContainer>
-                <Image
-                  src="/images/faixa2/selos-abf.png"
-                  alt="Selos ABF 2019, 2020 e 2022"
-                  layout="responsive"
-                  width="243"
-                  height="135"
-                />
-              </SeloContainer>
-            </Faixa2ImagensWrapper>
-
             <FormMobile>
               <FormularioHome />
             </FormMobile>
 
-            <Faixa2Texto>
-              A Escovei é referência no Rio de Janeiro, com 25 lojas
+            <Faixa2Titulo fontColor="white" margem="0 0 2rem">
+              Abra sua franquia
               {" "}
               <br />
-              em operação e modelo de negócio com formatação sólida!
-            </Faixa2Texto>
-            <Faixa2Titulo fontColor="primary" margem="0 0 2rem">
-              Faça parte de uma rede com mais
+              de beleza express
               {" "}
               <br />
-              de 20 anos de experiência no ramo
-              {" "}
-              <br />
-              e que oferece sabor com
+              da Escovei!
             </Faixa2Titulo>
-            <Faixa2TextoImagem>
-              <Image
-                src="/images/faixa2/texto-qualidade-e-saude.png"
-                layout="responsive"
-                width="420"
-                height="58"
-              />
-            </Faixa2TextoImagem>
+            <Faixa2Texto>
+              Tenha alta lucratividade oferecendo os mais procurados serviços de beleza sem hora marcada e de atendimento rápido!
+            </Faixa2Texto>
+            <br />
 
             <ListaItens>
               {
                 listaIcones.map((item) => <ListaItem key={item.id} item={item} />)
               }
             </ListaItens>
+            <br />
 
             <ButtonWrapper>
               <ButtonPulse
-                backColor="laranja"
+                backColor="secondary"
                 fontColor="white"
-                backPulse="laranja"
+                backPulse="secondary"
                 onClick={() => callForm()}
               >
                 <span>RECEBA A APRESENTAÇÃO DE NEGÓCIO</span>
               </ButtonPulse>
             </ButtonWrapper>
           </Coluna7>
-          <Coluna5>
-            <TijelaAcaiWrapper>
-              <Image
-                src="/images/faixa2/tijela-acai.png"
-                layout="responsive"
-                width="804"
-                height="634"
-              />
-            </TijelaAcaiWrapper>
-          </Coluna5>
         </Colunas>
       </Container>
     </Faixa2Wrapper>

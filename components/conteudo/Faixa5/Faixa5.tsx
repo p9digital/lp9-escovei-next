@@ -1,15 +1,19 @@
+import Image from "next/image";
+
 import Container from "../../ui/containers/Container";
 import ButtonPulse from "../../ui/buttons/ButtonPulse";
 
-import { FaixaConteudoResponsive, Faixa1Textos } from "../Faixa1/Styles";
+import { Faixa1Textos } from "../Faixa1/Styles";
 import {
   ButtonWrapperDesktop,
   Faixa5FormMobile,
+  Faixa5Modelo,
   Faixa5Texto,
   Faixa5Titulo, Faixa5Wrapper, ListaItens
 } from "./Styles";
 import { ListaItem } from "@/components/ui/listas/ListaItem";
 import FormularioHome from "@/components/formulario/FormularioHome";
+import { Coluna5, Coluna7, Colunas } from "@/components/ui/colunas/Colunas";
 
 type Props = {
   callForm: () => void
@@ -20,28 +24,19 @@ function Faixa5({ callForm }: Props) {
     {
       id: 1,
       fontSize: "18px",
-      icone: "/images/icone-check.png",
-      iconeSize: { height: "52", width: "52" },
+      icone: "/images/faixa5/icone-check.png",
+      iconeSize: { height: "26", width: "26" },
       size: "100%",
-      texto: "8 a cada 10 brasileiros buscam uma alimentação saudável",
+      texto: "O Brasil é o 4º mercado mundial de beleza, ficando atrás apenas dos EUA, do Japão e da China.",
       textColor: "black"
     },
     {
       id: 2,
       fontSize: "18px",
-      icone: "/images/icone-check.png",
-      iconeSize: { height: "52", width: "52" },
+      icone: "/images/faixa5/icone-check.png",
+      iconeSize: { height: "26", width: "26" },
       size: "100%",
-      texto: "Faturamento do setor de alimentação <strong>aumentou 14,5% entre 2021 e 2022</strong>, segundo a ABF.",
-      textColor: "black"
-    },
-    {
-      id: 3,
-      fontSize: "18px",
-      icone: "/images/icone-check.png",
-      iconeSize: { height: "52", width: "52" },
-      size: "100%",
-      texto: "Setor de açaí é um mercado bilionário (US$ 1,5 bilhão por ano, segundo Sindifrutas) e muito procurado no país e no exterior!",
+      texto: "Setor de Saúde, Beleza e Bem-Estar aumentou em 13,4% o faturamento entre 2021 e 2022, segundo a ABF.",
       textColor: "black"
     }
   ];
@@ -49,46 +44,54 @@ function Faixa5({ callForm }: Props) {
   return (
     <Faixa5Wrapper>
       <Container>
-        <FaixaConteudoResponsive>
-          <Faixa1Textos>
-            <Faixa5Titulo fontColor="primary" margem="0 0 2rem">
-              FAÇA PARTE DO CRESCIMENTO DO
-              {" "}
-              <br />
-              RAMO DA ALIMENTAÇÃO COM A
-              {" "}
-              <br />
-              ESCOVEI!
-            </Faixa5Titulo>
-            <Faixa5Texto>
-              A população brasileira está mais preocupada com a alimentação, principalmente após o cenário pandêmico dos últimos anos. Com isso, o setor de alimentação saudável cresceu exponencialmente desde 2020!
-            </Faixa5Texto>
-            <Faixa5Texto>
-              Os índices de crescimento do setor surpreenderam o mercado:
-            </Faixa5Texto>
+        <Colunas>
+          <Coluna7>
+            <Faixa1Textos>
+              <Faixa5Titulo fontColor="primary" margem="0 0 2rem">
+                PARTICIPE DO SUCESSO QUE É O
+                {" "}
+                <br />
+                MERCADO DA BELEZA!
+              </Faixa5Titulo>
+              <Faixa5Texto>
+                O setor de beleza e autocuidado sempre esteve em alta, porém, com a volta dos eventos presenciais, houve um crescimento acelerado pela procura de serviços de beleza!
+              </Faixa5Texto>
+              <Faixa5Texto>
+                Assim, o segmento se tornou um dos mais lucrativos para o empresário brasileiro, com números surpreendentes e posicionamento privilegiado:
+              </Faixa5Texto>
 
-            <ListaItens>
-              {
-                listaIcones.map((item) => <ListaItem key={item.id} item={item} />)
-              }
-            </ListaItens>
+              <ListaItens>
+                {
+                  listaIcones.map((item) => <ListaItem key={item.id} item={item} />)
+                }
+              </ListaItens>
 
-            <Faixa5FormMobile>
-              <FormularioHome />
-            </Faixa5FormMobile>
+              <Faixa5FormMobile>
+                <FormularioHome />
+              </Faixa5FormMobile>
 
-            <ButtonWrapperDesktop margem="0 0 -3rem">
-              <ButtonPulse
-                backColor="primary"
-                fontColor="white"
-                backPulse="primary"
-                onClick={() => callForm()}
-              >
-                <span>ABRA SUA FRANQUIA!</span>
-              </ButtonPulse>
-            </ButtonWrapperDesktop>
-          </Faixa1Textos>
-        </FaixaConteudoResponsive>
+              <ButtonWrapperDesktop margem="0 0 2rem">
+                <ButtonPulse
+                  backColor="secondary"
+                  fontColor="white"
+                  backPulse="secondary"
+                  onClick={() => callForm()}
+                >
+                  <span>ABRA SUA FRANQUIA ESCOVEI</span>
+                </ButtonPulse>
+              </ButtonWrapperDesktop>
+            </Faixa1Textos>
+          </Coluna7>
+          <Coluna5>
+            <Faixa5Modelo>
+              <Image
+                src="/images/faixa5/modelo.png"
+                width="387"
+                height="394"
+              />
+            </Faixa5Modelo>
+          </Coluna5>
+        </Colunas>
       </Container>
     </Faixa5Wrapper>
   );

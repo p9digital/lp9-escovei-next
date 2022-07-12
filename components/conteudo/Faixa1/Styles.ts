@@ -12,8 +12,9 @@ export const Faixa1Wrapper = styled(FaixaWrapperSimples)`
 background:url('/images/faixa1/background.jpg') no-repeat center center;
 background-size:cover;
 flex-wrap:wrap;
-padding-bottom:5rem;
-padding-top:25rem;
+margin-bottom:5rem;
+padding-bottom:15rem;
+padding-top:22rem;
 
 @media (max-width: 900px) {
   padding-top:12rem;
@@ -50,11 +51,11 @@ z-index:1;
 `;
 
 export const ModeloContainer = styled.div`
-bottom:-6px;
+bottom:-5.6rem;
 left:calc(50%);
 position:absolute;
 transform:translate(-50%);
-width:389px;
+width:494px;
 z-index:2;
 
 @media (max-width: 1200px) {
@@ -62,7 +63,6 @@ z-index:2;
 }
 @media (max-width: 900px) {
   transform:translate(0);
-  width:389px;
 }
 @media (max-width:600px) {
   width:250px;
@@ -73,26 +73,39 @@ export const LogoContainer = styled.div`
 width:334px;
 `;
 
-export const Faixa1Splash = styled.div`
+export const Faixa1Quadro = styled.div`
 align-items:center;
-background:url("/images/faixa1/background-splash.png") no-repeat center center;
-background-size:cover;
-display:flex;
-flex-direction:column;
-height:485px;
-justify-content:center;
+height:281px;
 margin-left:-5rem;
-padding-bottom:5rem;
-width:587px;
+position:relative;
+width:407px;
 
 @media (max-width: 900px) {
   margin-left:-35rem;
 }
 @media (max-width:600px) {
-  background-size:contain;
   margin-left:-20rem;
-  width:420px;
 }
+`;
+
+export const Faixa1QuadroBackground = styled.div`
+background-color:white;
+height:100%;
+margin-left:10rem;
+margin-top:2rem;
+position:absolute;
+width:80%;
+`;
+
+export const Faixa1QuadroTexto = styled.div`
+background-color:${(props) => props.theme.client.colors.primary};
+display:flex;
+flex-direction:column;
+height:100%;
+justify-content:center;
+padding:15px;
+position:relative;
+width:100%;
 `;
 
 export const ButtonWrapper = styled.div<{ margem?: string }>`
@@ -124,7 +137,10 @@ margin:2rem 0;
 export const Faixa1Titulo = styled(Title)`
 font-size:35px;
 font-weight:bold;
+margin-bottom:0;
+position:relative;
 text-align:center;
+z-index:1;
 
 @media (max-width:600px) {
   font-size:25px;

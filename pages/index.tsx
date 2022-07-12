@@ -150,7 +150,7 @@ function Home() {
       <Faixa4 callForm={callForm} />
       <Faixa5 callForm={callForm} />
       <Faixa6 callForm={callForm} />
-      <Faixa7 />
+      <Faixa7 callForm={callForm} />
       <Faixa8 callForm={callForm} />
       <Faixa9 callForm={callForm} />
 

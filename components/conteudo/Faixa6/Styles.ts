@@ -7,24 +7,23 @@ import { FaixaWrapperSimples } from "@/components/ui/faixas/FaixaStyles";
 export const Faixa6Wrapper = styled(FaixaWrapperSimples)`
 margin-top:-3px;
 padding-bottom:0;
-padding-top:10rem;
+padding-top:5rem;
 position:relative;
 z-index:1;
 `;
 
 export const Faixa6TextoTitulo = styled.div`
-margin-bottom:5rem;
-width:306px;
-
-@media (max-width: 900px) {
-  margin:2rem auto 5rem;
-}
+left:0;
+position:absolute;
+top:50%;
+width:327px;
 `;
 
 export const Faixa6Titulo = styled(Title)`
-color:white;
-font-size:26px;
+font-size:35px;
+font-weight:bold;
 text-transform:uppercase;
+
 @media (max-width: 900px) {
   text-align:center;
 }
@@ -34,7 +33,7 @@ text-transform:uppercase;
 `;
 
 export const Faixa6Texto = styled.p`
-color:white;
+color:black;
 font-size:16px;
 line-height:1.2;
 margin-bottom:15px;
@@ -54,10 +53,8 @@ strong {
 `;
 
 export const ListaItens = styled.div`
-display:grid;
-gap:5rem 0;
-grid-template:"grid1 grid2"
-"grid3 grid4";
+display:flex;
+gap:5rem;
 margin-bottom:5rem;
 
 @media (max-width:600px) {
@@ -72,39 +69,61 @@ margin-bottom:5rem;
 export const ListaItemModelo = styled.div`
 display:flex;
 flex-direction:column;
-max-width:250px;
+height:200px;
+position:relative;
+width:200px;
 
 @media (max-width:600px) {
   margin:auto;
 }
 `;
 
-export const ListaItemModeloFotoWrapper = styled.div`
+export const ListaItemModeloBackground = styled.div`
 background-color:${(props) => props.theme.client.colors.primary};
-margin-bottom:5rem;
-`;
-
-export const ListaItemModeloFotoTitulo = styled.p`
-color:white;
-font-weight:bold;
-padding:1rem 2rem;
-text-transform:uppercase;
-`;
-
-export const ListaItemModeloFoto = styled.div`
-margin-bottom:-4rem;
+height:200px;
 margin-left:2rem;
-margin-right:-4rem;
+margin-top:2rem;
+position:absolute;
+width:200px;
+z-index:1;
 `;
 
 export const ListaItemModeloTextos = styled.div`
-border:2px solid ${(props) => props.theme.client.colors.terciary};
-padding:0.5rem 0;
+align-items:center;
+background-color:${(props) => props.theme.client.colors.secondary};
+display:flex;
+flex-direction:column;
+height:200px;
+justify-content:center;
+position:relative;
+width:200px;
+z-index:2;
+`;
+
+export const ListaItemModeloTitulo = styled.p`
+color:white;
+font-size:18px;
+margin-bottom:2rem;
+text-align:center;
+
+span {
+  color:${(props) => props.theme.client.colors.primary};
+}
 `;
 
 export const ListaItemModeloTexto = styled.p`
 color:white;
-font-weight:bold;
+font-size:12px;
 text-align:center;
-text-transform:uppercase;
+`;
+
+export const Faixa6Imagens = styled.div`
+display:flex;
+gap:2rem;
+margin-left:5rem;
+width:calc(292px * 3 + 4rem);
+`;
+
+export const Faixa6Imagem = styled.div`
+width:292px;
 `;
