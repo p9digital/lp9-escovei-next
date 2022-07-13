@@ -15,6 +15,16 @@ position:absolute;
 transform:translate(20%);
 top:0;
 width:247px;
+
+@media (max-width:900px) {
+  transform:translate(-50%);
+  top:-7rem;
+  width:150px;
+}
+@media (max-width:768px) {
+  transform:translate(-100%);
+  width:100px;
+}
 `;
 
 export const Faixa7Titulo = styled(Title)`
@@ -53,6 +63,13 @@ width:calc(100% / 3);
 
 &:last-child {
   width:calc(100% / 3 * 2);
+}
+
+@media (max-width:1200px) {
+  width:calc(100% / 2);
+}
+@media (max-width:900px) {
+  width:calc(100% / 3);
 }
 `;
 

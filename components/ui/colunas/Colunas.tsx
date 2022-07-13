@@ -18,6 +18,14 @@ width:calc(100% / 12 * 2 - 1rem);
 }
 `;
 
+export const Coluna3 = styled.div`
+width:calc(100% / 12 * 3 - 1rem);
+
+@media (max-width:900px) {
+    width:100%;
+}
+`;
+
 export const Coluna4 = styled.div`
 width:calc(100% / 3 - 1rem);
 

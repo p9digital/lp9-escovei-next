@@ -8,7 +8,7 @@ export async function getSessao() {
     const session = await JSON.parse(sessionLead);
 
     if (session) {
-      localStorage.removeItem(sessionKey);
+      // localStorage.removeItem(sessionKey);
       return session;
     }
   }

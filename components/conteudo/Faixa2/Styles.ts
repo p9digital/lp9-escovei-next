@@ -16,8 +16,10 @@ font-size:35px;
 text-transform:uppercase;
 
 @media (max-width:900px) {
-  font-size:18px;
   text-align:center;
+}
+@media (max-width:768px) {
+  font-size:25px;
 }
 `;
 
@@ -28,6 +30,7 @@ line-height:1.5;
 margin-bottom:15px;
 
 @media (max-width:900px) {
+  font-size:20px;
   text-align:center;
 }
 @media (max-width:600px) {

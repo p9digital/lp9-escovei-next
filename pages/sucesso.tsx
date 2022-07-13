@@ -11,19 +11,20 @@ import { FaixaTextos, FaixaWrapperSimples } from '@/components/ui/faixas/FaixaSt
 
 import { tags } from '@/helpers/dados';
 import { getSessao } from '@/helpers/session';
-import { Coluna6, Colunas } from '@/components/ui/colunas/Colunas';
+import { Coluna3, Coluna6, Colunas } from '@/components/ui/colunas/Colunas';
 import { ModeloContainer } from '@/components/conteudo/Faixa1/Styles';
+import Header from '@/components/layout/Header';
 
 const FaixaWrapperSucesso = styled(FaixaWrapperSimples)`
-background:url("/images/background-sucesso.jpg") no-repeat center center;
+background:url("/images/background-sucesso.jpg") no-repeat;
+background-position:70% center;
 background-size:cover;
 display:flex;
 flex-direction:column;
-padding:10rem 0 5rem;
+padding:0 0 5rem;
 
-@media (max-width: 900px) {
-  background-image:none;
-  background-color:#741734;
+@media (max-width:900px) {
+  background-position:center center;
 }
 `;
 
@@ -34,12 +35,13 @@ position: relative;
 `;
 
 const FaixaSucessoModeloContainer = styled(ModeloContainer)`
-transform:translate(-30%);
-width:350px;
+bottom:-0.6rem;
+left:80%;
+width:494px;
 
 @media (max-width: 900px) {
   left:100%;
-  transform:translate(-100%);
+  transform:translate(-80%);
   width:280px;
 }
 @media (max-width: 768px) {
@@ -60,7 +62,7 @@ span {
 `;
 
 const TextoSucesso = styled.p`
-color:white;
+color:black;
 margin: 0 auto 30px;
 max-width: 900px;
 position: relative;
@@ -98,18 +100,23 @@ function Continue() {
       </Head>
 
       <FaixaWrapperSucesso>
+        <Header home={false} />
+
         <Container>
           <FaixaSucessoModeloContainer>
             <Image
               src="/images/faixa1/modelo.png"
               alt="Modelo"
-              width="389"
-              height="638"
+              width="494"
+              height="570"
             />
           </FaixaSucessoModeloContainer>
           <Colunas>
+            <Coluna3 />
             <Coluna6>
               <FaixaTextoSucesso>
+                <br />
+                <br />
                 <TitleSucesso fontColor="primary" margem="0 0 2rem">
                   <strong>
                     Falta pouco,
@@ -130,6 +137,7 @@ function Continue() {
                 <FormularioContinue />
               </FaixaTextoSucesso>
             </Coluna6>
+            <Coluna3 />
           </Colunas>
         </Container>
       </FaixaWrapperSucesso>

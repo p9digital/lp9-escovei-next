@@ -5,7 +5,7 @@ import { Coluna2, Coluna5, Colunas } from "@/components/ui/colunas/Colunas";
 import ButtonPulse from "@/components/ui/buttons/ButtonPulse";
 
 import {
-  Faixa3Conteudo, Faixa3LogoGrupoMagnet, Faixa3Texto, Faixa3Titulo, Faixa3Video, Faixa3Wrapper
+  Faixa3Conteudo, Faixa3Logo, Faixa3LogoGrupoMagnet, Faixa3Texto, Faixa3Titulo, Faixa3Video, Faixa3Wrapper
 } from "./Styles";
 import { ButtonWrapper } from "../Faixa1/Styles";
 
@@ -66,7 +66,15 @@ function Faixa3({ callForm }: Props) {
               </ButtonWrapper>
             </Faixa3Conteudo>
           </Coluna5>
-          <Coluna5 />
+          <Coluna5>
+            <Faixa3Logo>
+              <Image
+                src="/images/faixa3/background-logo.png"
+                width="793"
+                height="508"
+              />
+            </Faixa3Logo>
+          </Coluna5>
         </Colunas>
       </Container>
     </Faixa3Wrapper>

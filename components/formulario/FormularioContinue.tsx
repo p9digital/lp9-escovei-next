@@ -54,10 +54,10 @@ max-width: 40rem;
 }
 &::after {
   border-radius: 25px;
-  background-color: ${(props) => props.theme.client.colors.laranja};
+  background-color: ${(props) => props.theme.client.colors.primary};
 }
 &:hover {
-  background-color: ${(props) => props.theme.client.colors.primary};
+  background-color: ${(props) => props.theme.client.colors.secondary};
   color: white;
 }
 `;
@@ -284,7 +284,7 @@ function FormularioContinue() {
             <FormFooterSucesso>
               <FormButtonSucesso
                 type="submit"
-                backColor="laranja"
+                backColor="primary"
                 fontColor="white"
               >
                 CONCLUIR CADASTRO!

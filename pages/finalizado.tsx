@@ -57,10 +57,10 @@ text-align: center;
 text-transform:uppercase;
 
 span {
-  color: ${(props) => props.theme.client.colors.laranja};
+  color: ${(props) => props.theme.client.colors.primary};
 }
 strong {
-  color: ${(props) => props.theme.client.colors.laranja};
+  color: ${(props) => props.theme.client.colors.primary};
 }
 
 @media (max-width:600px) {
@@ -69,7 +69,7 @@ strong {
 `;
 
 export const FinalizadoTexto = styled.p`
-color: ${(props) => props.theme.client.colors.laranja};
+color: ${(props) => props.theme.client.colors.secondary};
 font-size:18px;
 margin-bottom:20px;
 
@@ -102,7 +102,7 @@ border-radius: 100px;
 
 export const FaixaWrapperRedes = styled(FaixaWrapperSimples)`
 align-items: center;
-background-color: ${(props) => props.theme.client.colors.primary};
+background-color: ${(props) => props.theme.client.colors.secondary};
 display: flex;
 flex-direction: column;
 justify-content: center;

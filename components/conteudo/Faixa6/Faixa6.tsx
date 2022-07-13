@@ -1,9 +1,8 @@
 import Image from "next/image";
 
 import Container from "../../ui/containers/Container";
-// import ButtonPulse from "../../ui/buttons/ButtonPulse";
+import ButtonPulse from "../../ui/buttons/ButtonPulse";
 
-// import { ButtonWrapper } from "../Faixa1/Styles";
 import {
   Faixa6Texto,
   Faixa6TextoTitulo,
@@ -17,10 +16,9 @@ import {
   ListaItemModeloTitulo,
   Faixa6Imagens,
   Faixa6Imagem,
+  Faixa6ButtonWrapper,
 } from "./Styles";
 import { Coluna5, Coluna7, Colunas } from "@/components/ui/colunas/Colunas";
-import { ButtonWrapper } from "../Faixa1/Styles";
-import ButtonPulse from "@/components/ui/buttons/ButtonPulse";
 
 type Props = {
   callForm: () => void
@@ -81,7 +79,7 @@ function Faixa6({ callForm }: Props) {
               }
             </ListaItens>
 
-            <ButtonWrapper margem="0 0 -3rem">
+            <Faixa6ButtonWrapper>
               <ButtonPulse
                 backColor="primary"
                 fontColor="white"
@@ -90,7 +88,7 @@ function Faixa6({ callForm }: Props) {
               >
                 <span>Saiba tudo sobre o negócio</span>
               </ButtonPulse>
-            </ButtonWrapper>
+            </Faixa6ButtonWrapper>
           </Coluna5>
           <Coluna7>
             <Faixa6Imagens>

@@ -35,7 +35,11 @@ width:calc(100% - 60px);
 
 const ItemTexto = styled.p<{fontSize: string, textColor?: string}>`
 color:${(props) => (props.textColor ? props.textColor : "white")};
-font-size: ${(props) => props.fontSize}
+font-size: ${(props) => props.fontSize};
+
+@media (max-width:600px) {
+  font-size:16px;
+}
 `;
 
 type Props = {

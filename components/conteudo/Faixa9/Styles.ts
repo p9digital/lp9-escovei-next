@@ -42,6 +42,9 @@ span {
   display:inline;
 }
 
+@media (max-width:768px) {
+  font-size:3rem;
+}
 @media (max-width:600px) {
   font-size:2.4rem;
 }
@@ -52,7 +55,7 @@ color:white;
 font-size:25px;
 margin-bottom:4rem;
 
-@media (max-width:600px) {
+@media (max-width:768px) {
   font-size:2rem;
 }
 `;

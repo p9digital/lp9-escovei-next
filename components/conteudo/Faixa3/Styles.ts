@@ -1,11 +1,32 @@
 import styled from "styled-components";
 import Title from "@/components/ui/tipografia/Title";
+import { Coluna2, Coluna5 } from "@/components/ui/colunas/Colunas";
+import { FaixaWrapperSimples } from "@/components/ui/faixas/FaixaStyles";
 
-export const Faixa3Wrapper = styled.div`
+export const Faixa3Wrapper = styled(FaixaWrapperSimples)`
 background:url("/images/faixa3/background.png") no-repeat center bottom;
 background-size:100% 100%;
 position:relative;
 z-index:3;
+
+${Coluna2} {
+  @media (max-width:1200px) {
+    display:none;
+  }
+}
+${Coluna5} {
+  @media (max-width:1200px) {
+    width:calc(50% - 1rem);
+  }
+  @media (max-width:900px) {
+    width:100%;
+  }
+}
+
+@media (max-width:1200px) {
+  background-color:${(props) => props.theme.client.colors.secondary};
+  background-image:none;
+}
 `;
 
 export const Faixa3Conteudo = styled.div`
@@ -13,7 +34,6 @@ align-items:flex-start;
 display:flex;
 flex-direction:column;
 justify-content:center;
-padding:3rem 0;
 `;
 
 export const Faixa3Titulo = styled(Title)`
@@ -46,6 +66,10 @@ margin-bottom:2rem;
 
 export const Faixa3LogoGrupoMagnet = styled.div`
 width:284px;
+
+@media (max-width:900px) {
+  margin:auto;
+}
 `;
 
 export const Faixa3Video = styled.div`
@@ -68,5 +92,21 @@ video {
 
 @media (max-width:900px) {
   text-align:center;
+}
+`;
+
+export const Faixa3Logo = styled.div`
+max-width:793px;
+position:absolute;
+right:0;
+top:50%;
+transform:translate(-10%, -50%);
+width:38%;
+
+@media (max-width:1200px) {
+  width:42%;
+}
+@media (max-width:900px) {
+  display:none;
 }
 `;

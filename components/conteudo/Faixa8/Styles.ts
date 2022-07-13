@@ -11,6 +11,16 @@ position:relative;
 export const Faixa8Produtos = styled.div`
 margin:-50rem 0 5rem 5rem;
 width:711px;
+
+@media (max-width:900px) {
+  width:200px;
+}
+@media (max-width:768px) {
+  margin:-50rem 0 5rem 1rem;
+}
+@media (max-width:600px) {
+  display:none;
+}
 `;
 
 export const Faixa8TextoCardapio = styled.div`
@@ -66,6 +76,13 @@ display:flex;
 gap:5rem;
 justify-content:space-between;
 margin:0 -10rem 5rem;
+
+@media (max-width:1200px) {
+  margin:0 0 5rem;
+}
+@media (max-width:768px) {
+  gap:2rem;
+}
 `;
 
 export const ListaImagemItem = styled.div`

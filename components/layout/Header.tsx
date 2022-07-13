@@ -5,21 +5,25 @@ import Container from '../ui/containers/Container';
 import { LogoContainer } from '../conteudo/Faixa1/Styles';
 
 const HeaderWrapper = styled.div<{home: boolean}>`
-  background-color: ${(props) => props.theme.client.colors.secondary};
-  position: relative;
-  padding: ${(props) => (props.home ? "5rem 0 2rem" : "5rem 0")};
-  width:100%;
+background-color: ${(props) => props.theme.client.colors.secondary};
+position: relative;
+padding: ${(props) => (props.home ? "5rem 0 2rem" : "3rem 0")};
+width:100%;
+
+@media (max-width:900px) {
+  padding: ${(props) => (props.home ? "2rem 0 1rem" : "2rem 0")};
+}
 `;
 
 const HeaderContainer = styled.div<{home: boolean}>`
-  display: flex;
-  justify-content: ${(props) => (props.home ? "flex-start" : "space-around")};
-  align-items: center;
+display: flex;
+justify-content: ${(props) => (props.home ? "flex-start" : "space-around")};
+align-items: center;
 
-  @media (max-width: 900px) {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+@media (max-width: 900px) {
+  justify-content: center;
+  flex-wrap: wrap;
+}
 `;
 
 interface Props {

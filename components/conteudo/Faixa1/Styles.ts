@@ -19,8 +19,13 @@ padding-top:22rem;
 @media (max-width: 900px) {
   padding-top:12rem;
 }
+@media (max-width: 768px) {
+  padding-bottom:8rem;
+  padding-top:8rem;
+}
 @media (max-width: 600px) {
-  padding-top:0;
+  padding-bottom:15rem;
+  padding-top:5rem;
 }
 `;
 
@@ -62,15 +67,24 @@ z-index:2;
   transform:translate(-120px);
 }
 @media (max-width: 900px) {
-  transform:translate(0);
+  transform:translate(1rem);
+  width:400px;
+}
+@media (max-width:768px) {
+  transform:translate(10%);
+  width:300px;
 }
 @media (max-width:600px) {
-  width:250px;
+  width:200px;
 }
 `;
 
 export const LogoContainer = styled.div`
 width:334px;
+
+@media (max-width:900px) {
+  width:200px;
+}
 `;
 
 export const Faixa1Quadro = styled.div`
@@ -80,11 +94,19 @@ margin-left:-5rem;
 position:relative;
 width:407px;
 
+@media (max-width: 1200px) {
+  margin-left:-1rem;
+}
 @media (max-width: 900px) {
   margin-left:-35rem;
 }
+@media (max-width:768px) {
+  height:220px;
+  margin-left:-25rem;
+  width:307px;
+}
 @media (max-width:600px) {
-  margin-left:-20rem;
+  margin-left:0;
 }
 `;
 
@@ -95,6 +117,10 @@ margin-left:10rem;
 margin-top:2rem;
 position:absolute;
 width:80%;
+
+@media (max-width:768px) {
+  margin-left:8rem;
+}
 `;
 
 export const Faixa1QuadroTexto = styled.div`
@@ -142,7 +168,7 @@ position:relative;
 text-align:center;
 z-index:1;
 
-@media (max-width:600px) {
+@media (max-width:768px) {
   font-size:25px;
 }
 `;

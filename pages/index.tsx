@@ -140,6 +140,7 @@ function Home() {
       <Faixa1 />
       <Faixa2 callForm={callForm} />
       <Faixa3 callForm={callForm} />
+      <Faixa4 callForm={callForm} />
 
       <Element name="form">
         <FormWrapper fixar={FormFixo}>
@@ -147,7 +148,6 @@ function Home() {
         </FormWrapper>
       </Element>
 
-      <Faixa4 callForm={callForm} />
       <Faixa5 callForm={callForm} />
       <Faixa6 callForm={callForm} />
       <Faixa7 callForm={callForm} />

@@ -10,17 +10,15 @@ background:url("/images/faixa5/background.jpg") no-repeat center center;
 background-size:cover;
 position:relative;
 z-index:2;
-
-@media (max-width:900px) {
-  background: url("/images/faixa5/background1.png") no-repeat bottom left;
-  background-size:200px;
-}
 `;
 
 export const Faixa5Titulo = styled(Title)`
 font-size:30px;
-@media (max-width:600px) {
+@media (max-width:900px) {
   font-size:25px;
+}
+@media (max-width:600px) {
+  font-size:22px;
 }
 `;
 
@@ -54,6 +52,13 @@ margin-bottom:5rem;
 export const Faixa5Modelo = styled.div`
 margin:auto;
 width:387px;
+
+@media (max-width:900px) {
+  margin-top:15rem;
+}
+@media (max-width:768px) {
+  width:250px;
+}
 `;
 
 export const Faixa5FormMobile = styled(FormMobile)`
