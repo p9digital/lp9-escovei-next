@@ -5,7 +5,7 @@ import Title from "@/components/ui/tipografia/Title";
 import { FaixaWrapperSimples } from "@/components/ui/faixas/FaixaStyles";
 
 export const Faixa9Wrapper = styled(FaixaWrapperSimples)`
-background-color:${(props) => props.theme.client.colors.primary};
+background-color:${(props) => props.theme.client.colors.secondary};
 padding:5rem 0;
 position:relative;
 
@@ -17,7 +17,7 @@ position:relative;
 export const Faixa9SetaWrapper = styled.div`
 left:100%;
 position:absolute;
-top:30%;
+top:0;
 transform:translate(-20%, 0);
 width:304px;
 
@@ -37,8 +37,8 @@ color:${(props) => props.theme.client.colors.white};
 font-size:35px;
 
 span {
-  background-color:${(props) => props.theme.client.colors.laranja};
-  box-shadow: 0.5em 0 0 ${(props) => props.theme.client.colors.laranja},-0.1em 0 0 ${(props) => props.theme.client.colors.laranja};
+  background-color:${(props) => props.theme.client.colors.primary};
+  box-shadow: 0.5em 0 0 ${(props) => props.theme.client.colors.primary},-0.1em 0 0 ${(props) => props.theme.client.colors.primary};
   display:inline;
 }
 
@@ -49,10 +49,14 @@ span {
 
 export const Faixa9Texto = styled.p`
 color:white;
-font-size:35px;
+font-size:25px;
 margin-bottom:4rem;
 
 @media (max-width:600px) {
   font-size:2rem;
 }
+`;
+
+export const Faixa9LogoMagnet = styled.div`
+width:284px;
 `;

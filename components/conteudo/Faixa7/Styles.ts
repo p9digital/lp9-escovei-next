@@ -5,15 +5,8 @@ import { FaixaWrapperSimples } from "@/components/ui/faixas/FaixaStyles";
 
 export const Faixa7Wrapper = styled(FaixaWrapperSimples)`
 background-color:${(props) => props.theme.client.colors.secondary};
-padding:10rem 0 20rem;
+padding:10rem 0;
 position:relative;
-
-@media (max-width:900px) {
-  background-size:cover;
-}
-@media (max-width:600px) {
-  padding:10rem 0 25rem;
-}
 `;
 
 export const Faixa7TextoImagem = styled.div`
@@ -50,6 +43,7 @@ flex-wrap:wrap;
 gap:2rem 0;
 justify-content:flex-start;
 margin-bottom:5rem;
+width:100%;
 `;
 
 export const Faixa7ListaItem = styled.div`

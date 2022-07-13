@@ -9,6 +9,7 @@ import {
   ButtonWrapper,
 } from "../Faixa1/Styles";
 import {
+  Faixa9LogoMagnet,
   Faixa9SetaWrapper,
   Faixa9Texto, Faixa9Titulo, Faixa9Wrapper
 } from "./Styles";
@@ -23,18 +24,6 @@ function Faixa9({ callForm }: Props) {
       <Container>
         <FaixaConteudoResponsive>
           <Faixa1Textos>
-            <ButtonWrapper>
-              <ButtonPulse
-                backColor="primary"
-                fontColor="white"
-                backPulse="primary"
-                onClick={() => callForm()}
-              >
-                <span>Conheça mais sobre a Escovei</span>
-              </ButtonPulse>
-            </ButtonWrapper>
-            <br />
-
             <Faixa9SetaWrapper>
               <Image
                 alt="Seta"
@@ -45,33 +34,40 @@ function Faixa9({ callForm }: Props) {
             </Faixa9SetaWrapper>
 
             <Faixa9Titulo fontColor="preto" margem="0 0 2rem">
-              SEJA FRANQUEADO(A)
-              {" "}
-              <br />
-              ESCOVEI E TENHA
-              {" "}
-              <br />
               <span>
-                ALTO FATURAMENTO COM O SETOR DE ALIMENTAÇÃO!
+                INVISTA NA SUA FRANQUIA
+                {" "}
+                <br />
+                DE BELEZA EXPRESS
+                {" "}
+                <br />
+                COM ESCOVEI!
               </span>
             </Faixa9Titulo>
             <Faixa9Texto>
-              ABRA UMA FRANQUIA ESCOVEI
-              {" "}
-              <br />
-              NA SUA CIDADE!
+              Torne-se empresário(a) de sucesso com um negócio seguro e lucrativo.
             </Faixa9Texto>
 
             <ButtonWrapper>
               <ButtonPulse
-                backColor="terciary"
-                fontColor="primary"
-                backPulse="terciary"
+                backColor="primary"
+                fontColor="white"
+                backPulse="primary"
                 onClick={() => callForm()}
               >
                 <span>Baixe a apresentação de negócio</span>
               </ButtonPulse>
             </ButtonWrapper>
+            <br />
+            <br />
+
+            <Faixa9LogoMagnet>
+              <Image
+                src="/images/logo-grupo-magnet.png"
+                width="284"
+                height="41"
+              />
+            </Faixa9LogoMagnet>
           </Faixa1Textos>
         </FaixaConteudoResponsive>
       </Container>

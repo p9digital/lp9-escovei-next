@@ -97,7 +97,7 @@ z-index: 0;
 
 &::after {
   animation: ${pulse} 3.6s ease-in-out infinite;
-  background-color: ${(props) => props.theme.client.colors.vanilla};
+  background-color: ${(props) => props.theme.client.colors.primary};
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   content: "";
@@ -116,7 +116,7 @@ z-index: 0;
 
 &:hover {
   background-color:${(props) => props.theme.client.colors.primary};
-  color:${(props) => props.theme.client.colors.vanilla};
+  color:${(props) => props.theme.client.colors.white};
   transform: none;
   &::after {
     visibility: hidden;

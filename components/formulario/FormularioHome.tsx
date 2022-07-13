@@ -257,8 +257,8 @@ function FormularioHome() {
             <FormFooter>
               <FormButton
                 type="submit"
-                backColor="vanilla"
-                fontColor="primary"
+                backColor="primary"
+                fontColor="white"
               >
                 BAIXAR APRESENTAÇÃO
               </FormButton>

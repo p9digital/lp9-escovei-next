@@ -3,36 +3,107 @@ import Image from "next/image";
 import Container from "../../ui/containers/Container";
 import ButtonPulse from "../../ui/buttons/ButtonPulse";
 
+import { Faixa1Textos, ButtonWrapper } from "../Faixa1/Styles";
 import {
-  FaixaConteudoResponsive,
-  Faixa1Textos,
-  ButtonWrapper,
-} from "../Faixa1/Styles";
-import {
-  Faixa8Monitor,
-  Faixa8Texto, Faixa8TextoCardapio, Faixa8Titulo, Faixa8Wrapper, ListaImagemItem, ListaImagens
+  Faixa8ListaItem,
+  Faixa8ListaItemIcone,
+  Faixa8ListaItemTexto,
+  Faixa8ListaItens,
+  Faixa8Produtos, Faixa8Texto, Faixa8Titulo, Faixa8Wrapper, ListaImagemItem, ListaImagens
 } from "./Styles";
+import { Coluna6, Colunas } from "@/components/ui/colunas/Colunas";
 
 type Props = {
   callForm: () => void
 }
 
 function Faixa8({ callForm }: Props) {
+  const itens = [
+    {
+      id: 1,
+      icone: "/images/faixa8/icone1.png",
+      texto: "Escova"
+    },
+    {
+      id: 2,
+      icone: "/images/faixa8/icone2.png",
+      texto: "Penteado"
+    },
+    {
+      id: 3,
+      icone: "/images/faixa8/icone3.png",
+      texto: "Maquiagem"
+    },
+  ];
+
   return (
     <Faixa8Wrapper>
-      <Faixa1Textos>
-        <Container>
-          <FaixaConteudoResponsive>
+      <Container>
+        <Colunas>
+          <Coluna6>
             <Faixa1Textos>
-              <Faixa8Monitor>
-                <Image
-                  alt="Monitor"
-                  src="/images/faixa8/monitor.png"
-                  width="395"
-                  height="376"
-                />
-              </Faixa8Monitor>
+              <Faixa8Titulo fontColor="primary" margem="0 0 2rem">
+                SERVIÇOS DE BELEZA
+              </Faixa8Titulo>
+              <Faixa8Texto>
+                Atendimento rápido com qualidade e padrão de excelência, sem precisar marcar horário
+              </Faixa8Texto>
+              <Faixa8Texto>
+                Tenha altos fluxos de clientes em seu salão, oferecendo os mais procurados serviços de beleza:
+              </Faixa8Texto>
 
+              <Faixa8ListaItens>
+                {
+                  itens.map((item) => (
+                    <Faixa8ListaItem key={item.id}>
+                      <Faixa8ListaItemIcone>
+                        <Image
+                          src={item.icone}
+                          width="34"
+                          height="34"
+                        />
+                      </Faixa8ListaItemIcone>
+
+                      <Faixa8ListaItemTexto>
+                        {item.texto}
+                      </Faixa8ListaItemTexto>
+                    </Faixa8ListaItem>
+                  ))
+                }
+              </Faixa8ListaItens>
+
+            </Faixa1Textos>
+          </Coluna6>
+          <Coluna6>
+            <Faixa8Produtos>
+              <Image
+                alt="Produtos"
+                src="/images/faixa8/background-produtos.png"
+                width="711"
+                height="617"
+              />
+            </Faixa8Produtos>
+          </Coluna6>
+        </Colunas>
+
+        <ListaImagens>
+          {
+            [1, 2, 3].map((item, index) => (
+              <ListaImagemItem>
+                <Image
+                  key={index}
+                  src={`/images/faixa8/foto${item}.jpg`}
+                  width="488"
+                  height="429"
+                />
+              </ListaImagemItem>
+            ))
+          }
+        </ListaImagens>
+
+        <Colunas>
+          <Coluna6>
+            <Faixa1Textos>
               <ButtonWrapper>
                 <ButtonPulse
                   backColor="primary"
@@ -40,48 +111,13 @@ function Faixa8({ callForm }: Props) {
                   backPulse="primary"
                   onClick={() => callForm()}
                 >
-                  <span>Seja um franqueado(a) agora!</span>
+                  <span>Lucre alto com sua franquia!</span>
                 </ButtonPulse>
               </ButtonWrapper>
-              <br />
-              <br />
-
-              <Faixa8TextoCardapio>
-                <Image
-                  alt="Texto cardápio"
-                  src="/images/faixa8/texto-cardapio.png"
-                  width="235"
-                  height="54"
-                />
-              </Faixa8TextoCardapio>
-              <Faixa8Titulo fontColor="primary" margem="0 0 2rem">
-                COM PRODUTOS DE
-                {" "}
-                <br />
-                QUALIDADE E SABOR
-              </Faixa8Titulo>
-              <Faixa8Texto>
-                Receba seus clientes o dia todo com as variadas opções que vão desde o café da manhã até o jantar!
-              </Faixa8Texto>
             </Faixa1Textos>
-          </FaixaConteudoResponsive>
-        </Container>
-
-        <ListaImagens>
-          {
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((item, index) => (
-              <ListaImagemItem>
-                <Image
-                  key={index}
-                  src={`/images/faixa8/imagem${item}.jpg`}
-                  width="232"
-                  height="229"
-                />
-              </ListaImagemItem>
-            ))
-          }
-        </ListaImagens>
-      </Faixa1Textos>
+          </Coluna6>
+        </Colunas>
+      </Container>
     </Faixa8Wrapper>
   );
 }

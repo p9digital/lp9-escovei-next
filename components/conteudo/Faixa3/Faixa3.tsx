@@ -36,7 +36,7 @@ function Faixa3({ callForm }: Props) {
 
               <Faixa3LogoGrupoMagnet>
                 <Image
-                  src="/images/faixa3/logo-grupo-magnet.png"
+                  src="/images/logo-grupo-magnet.png"
                   width="284"
                   height="41"
                 />
