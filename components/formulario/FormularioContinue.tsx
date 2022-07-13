@@ -124,6 +124,7 @@ function FormularioContinue() {
           cidade: lead.cidade,
           experiencia: lead.experiencia,
           profissao: lead.profissao,
+          cargo: lead.profissao,
           tempo: lead.tempo,
           porque: lead.porque,
           queryParams: session.queryParams
