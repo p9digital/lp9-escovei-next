@@ -1,33 +1,18 @@
 import styled from "styled-components";
 
 import Title from "@/components/ui/tipografia/Title";
-import { Coluna5, Coluna7, Colunas } from "@/components/ui/colunas/Colunas";
 
 import { FaixaWrapperSimples } from "@/components/ui/faixas/FaixaStyles";
 import { ButtonWrapper } from "../Faixa1/Styles";
 
 export const Faixa6Wrapper = styled(FaixaWrapperSimples)`
+flex-direction:column;
 margin-top:-3px;
 padding-bottom:0;
 padding-top:5rem;
 position:relative;
 z-index:1;
 
-${Colunas} {
-  @media (max-width:1200px) {
-    flex-wrap:wrap;
-  }
-}
-${Coluna5} {
-  @media (max-width:1200px) {
-    width:100%;
-  }
-}
-${Coluna7} {
-  @media (max-width:1200px) {
-    width:100%;
-  }
-}
 `;
 
 export const Faixa6TextoTitulo = styled.div`
@@ -78,6 +63,7 @@ strong {
 
 export const ListaItens = styled.div`
 display:flex;
+flex-direction:column;
 gap:5rem;
 margin-bottom:5rem;
 
@@ -91,10 +77,11 @@ margin-bottom:5rem;
 
 export const ListaItemModelo = styled.div`
 display:flex;
-flex-direction:column;
 height:200px;
+max-width:460px;
+margin:auto;
 position:relative;
-width:200px;
+width:100%;
 
 @media (max-width:600px) {
   margin:auto;
@@ -111,23 +98,57 @@ width:200px;
 z-index:1;
 `;
 
-export const ListaItemModeloTextos = styled.div`
+export const ListaItemModeloHeader = styled.div`
 align-items:center;
 background-color:${(props) => props.theme.client.colors.secondary};
 display:flex;
 flex-direction:column;
+flex-grow:1;
 height:200px;
 justify-content:center;
-position:relative;
-width:200px;
-z-index:2;
+padding:2rem;
+
+& > p {
+  color:white;
+  margin-bottom:2rem;
+}
+`;
+
+export const ListaItemModeloHeaderCadeiras = styled.div`
+display:flex;
+justify-content:space-between;
+gap:2rem;
+`;
+
+export const ListaItemModeloHeaderCadeira = styled.div`
+width:70px;
+`;
+
+export const ListaItemModeloHeaderCadeiraTexto = styled.div`
+text-align:center;
+p {
+  color:${(props) => props.theme.client.colors.primary};
+}
+`;
+
+export const ListaItemModeloHeaderCadeiraNumero = styled.div`
+`;
+
+export const ListaItemModeloTextos = styled.div`
+align-items:flex-start;
+background-color:${(props) => props.theme.client.colors.primary};
+display:flex;
+flex-direction:column;
+flex-grow:1;
+height:200px;
+justify-content:center;
+padding:2rem;
 `;
 
 export const ListaItemModeloTitulo = styled.p`
 color:white;
-font-size:18px;
+font-size:20px;
 margin-bottom:2rem;
-text-align:center;
 
 span {
   color:${(props) => props.theme.client.colors.primary};
@@ -136,35 +157,51 @@ span {
 
 export const ListaItemModeloTexto = styled.p`
 color:white;
-font-size:12px;
-text-align:center;
+font-size:20px;
+font-weight:bold;
 `;
 
 export const Faixa6ButtonWrapper = styled(ButtonWrapper)`
-margin:0 0 -3rem;
+margin:0 0 3rem;
 
 @media (max-width:1200px) {
   margin:0 0 3rem;
 }
 `;
 
+export const Faixa6Modelo = styled.div`
+width:498px;
+
+@media (max-width:900px) {
+  margin:auto;
+}
+@media (max-width:768px) {
+  width:380px;
+}
+@media (max-width:600px) {
+  width:100%;
+}
+`;
+
 export const Faixa6Imagens = styled.div`
 display:flex;
 gap:2rem;
-margin-left:5rem;
-width:calc(292px * 3 + 4rem);
+justify-content: space-between;
+margin:2rem -1rem 1rem;
 
-@media (max-width:1200px) {
-  margin-bottom:10rem;
-  margin-left:0;
-  width:100%;
+@media (max-width:992px) {
+  flex-wrap:wrap;
+  gap:1rem;
 }
 `;
 
 export const Faixa6Imagem = styled.div`
 width:292px;
 
-@media (max-width:1200px) {
-  width:100%;
+@media (max-width:992px) {
+  width:calc(100% / 3 - 1rem);
+}
+@media (max-width:420px) {
+  width:calc(50% - 1rem);
 }
 `;

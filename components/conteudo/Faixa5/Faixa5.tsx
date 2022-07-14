@@ -27,7 +27,7 @@ function Faixa5({ callForm }: Props) {
       icone: "/images/faixa5/icone-check.png",
       iconeSize: { height: "26", width: "26" },
       size: "100%",
-      texto: "O Brasil é o 4º mercado mundial de beleza, ficando atrás apenas dos EUA, do Japão e da China.",
+      texto: "<strong>O Brasil é o 4º mercado mundial de beleza</strong>, ficando atrás apenas dos EUA, do Japão e da China.",
       textColor: "black"
     },
     {
@@ -36,7 +36,7 @@ function Faixa5({ callForm }: Props) {
       icone: "/images/faixa5/icone-check.png",
       iconeSize: { height: "26", width: "26" },
       size: "100%",
-      texto: "Setor de Saúde, Beleza e Bem-Estar aumentou em 13,4% o faturamento entre 2021 e 2022, segundo a ABF.",
+      texto: "<strong>Setor de Saúde, Beleza e Bem-Estar aumentou em 13,4% o faturamento</strong> entre 2021 e 2022, segundo a ABF.",
       textColor: "black"
     }
   ];

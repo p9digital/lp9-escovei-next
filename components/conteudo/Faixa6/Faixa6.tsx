@@ -5,18 +5,22 @@ import ButtonPulse from "../../ui/buttons/ButtonPulse";
 
 import {
   Faixa6Texto,
-  Faixa6TextoTitulo,
   Faixa6Titulo,
   Faixa6Wrapper,
   ListaItens,
   ListaItemModelo,
+  ListaItemModeloHeader,
   ListaItemModeloTextos,
   ListaItemModeloTexto,
-  ListaItemModeloBackground,
   ListaItemModeloTitulo,
   Faixa6Imagens,
   Faixa6Imagem,
   Faixa6ButtonWrapper,
+  Faixa6Modelo,
+  ListaItemModeloHeaderCadeira,
+  ListaItemModeloHeaderCadeiras,
+  ListaItemModeloHeaderCadeiraNumero,
+  ListaItemModeloHeaderCadeiraTexto,
 } from "./Styles";
 import { Coluna5, Coluna7, Colunas } from "@/components/ui/colunas/Colunas";
 
@@ -30,16 +34,26 @@ function Faixa6({ callForm }: Props) {
       id: 1,
       fontSize: "18px",
       size: "100%",
-      modelo: "Salão de Beleza<br /><span>6 cadeiras</span>",
-      texto: "Faturamento médio<br />R$ 75 mil por mês",
+      modelo: "Salão de Beleza",
+      cadeiras: {
+        imagem: "numero6.png",
+        width: 60,
+        height: 84
+      },
+      texto: "R$ 75 mil/mês",
       textColor: "white"
     },
     {
       id: 2,
       fontSize: "18px",
       size: "100%",
-      modelo: "Salão de Beleza<br /><span>10 cadeiras</span>",
-      texto: "Faturamento médio<br />R$ 110 mil por mês",
+      modelo: "Salão de Beleza",
+      cadeiras: {
+        imagem: "numero10.png",
+        width: 107,
+        height: 84
+      },
+      texto: "R$ 100 mil/mês",
       textColor: "white"
     }
   ];
@@ -49,13 +63,13 @@ function Faixa6({ callForm }: Props) {
       <Container>
         <Colunas>
           <Coluna5>
-            <Faixa6TextoTitulo>
+            {/* <Faixa6TextoTitulo>
               <Image
                 src="/images/faixa7/background-logo.png"
                 width="327"
                 height="554"
               />
-            </Faixa6TextoTitulo>
+            </Faixa6TextoTitulo> */}
 
             <Faixa6Titulo fontColor="primary" margem="0 0 2rem">
               MODELOS DE NEGÓCIO
@@ -69,9 +83,33 @@ function Faixa6({ callForm }: Props) {
               {
                 listaIcones.map((item) => (
                   <ListaItemModelo key={item.id}>
-                    <ListaItemModeloBackground />
+                    <ListaItemModeloHeader>
+                      <p>{item.modelo}</p>
+                      <ListaItemModeloHeaderCadeiras>
+                        <ListaItemModeloHeaderCadeira>
+                          <Image
+                            src="/images/faixa6/cadeira.png"
+                            width="70"
+                            height="78"
+                          />
+                        </ListaItemModeloHeaderCadeira>
+
+                        <ListaItemModeloHeaderCadeiraTexto>
+                          <ListaItemModeloHeaderCadeiraNumero>
+                            <img alt="Cadeira " src={`/images/faixa6/${item.cadeiras.imagem}`} />
+                          </ListaItemModeloHeaderCadeiraNumero>
+
+                          <p>cadeiras</p>
+                        </ListaItemModeloHeaderCadeiraTexto>
+                      </ListaItemModeloHeaderCadeiras>
+                    </ListaItemModeloHeader>
                     <ListaItemModeloTextos>
-                      <ListaItemModeloTitulo dangerouslySetInnerHTML={{ __html: item.modelo }} />
+                      <ListaItemModeloTitulo>
+                        Faturamento
+                        {" "}
+                        <br />
+                        médio
+                      </ListaItemModeloTitulo>
                       <ListaItemModeloTexto dangerouslySetInnerHTML={{ __html: item.texto }} />
                     </ListaItemModeloTextos>
                   </ListaItemModelo>
@@ -91,22 +129,30 @@ function Faixa6({ callForm }: Props) {
             </Faixa6ButtonWrapper>
           </Coluna5>
           <Coluna7>
-            <Faixa6Imagens>
-              {
-                [1, 2, 3].map((item, index) => (
-                  <Faixa6Imagem key={index}>
-                    <Image
-                      src={`/images/faixa6/foto${item}.jpg`}
-                      width="292"
-                      height="274"
-                    />
-                  </Faixa6Imagem>
-                ))
-              }
-            </Faixa6Imagens>
+            <Faixa6Modelo>
+              <Image
+                src="/images/faixa6/modelo.png"
+                width="498"
+                height="633"
+              />
+            </Faixa6Modelo>
           </Coluna7>
         </Colunas>
       </Container>
+
+      <Faixa6Imagens>
+        {
+          [1, 2, 3, 4, 5, 6].map((item, index) => (
+            <Faixa6Imagem key={index}>
+              <Image
+                src={`/images/faixa6/foto${item}.jpg`}
+                width="309"
+                height="290"
+              />
+            </Faixa6Imagem>
+          ))
+        }
+      </Faixa6Imagens>
     </Faixa6Wrapper>
   );
 }

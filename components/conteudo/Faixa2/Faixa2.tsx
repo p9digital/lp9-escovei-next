@@ -91,7 +91,7 @@ function Faixa2({ callForm }: Props) {
                 backPulse="secondary"
                 onClick={() => callForm()}
               >
-                <span>RECEBA A APRESENTAÇÃO DE NEGÓCIO</span>
+                <span>CLIQUE E RECEBA A NOSSA APRESENTAÇÃO</span>
               </ButtonPulse>
             </ButtonWrapper>
           </Coluna7>

@@ -60,7 +60,7 @@ bottom:-5.6rem;
 left:calc(50%);
 position:absolute;
 transform:translate(-50%);
-width:494px;
+width:438px;
 z-index:2;
 
 @media (max-width: 1200px) {

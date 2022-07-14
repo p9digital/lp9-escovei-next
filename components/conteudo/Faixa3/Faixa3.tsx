@@ -5,7 +5,7 @@ import { Coluna2, Coluna5, Colunas } from "@/components/ui/colunas/Colunas";
 import ButtonPulse from "@/components/ui/buttons/ButtonPulse";
 
 import {
-  Faixa3Conteudo, Faixa3Logo, Faixa3LogoGrupoMagnet, Faixa3Texto, Faixa3Titulo, Faixa3Video, Faixa3Wrapper
+  Faixa3Conteudo, Faixa3Logo, Faixa3LogoGrupoMagnet, Faixa3Texto, Faixa3Titulo, Faixa3Wrapper
 } from "./Styles";
 import { ButtonWrapper } from "../Faixa1/Styles";
 
@@ -25,24 +25,21 @@ function Faixa3({ callForm }: Props) {
                 CONHEÇA A ESCOVEI!
               </Faixa3Titulo>
               <Faixa3Texto>
-                A Escovei foi inspirada na Casa de Estilistas da Rússia, com foco em oferecer serviços de alto padrão e qualidade a todos que procuram elevar sua autoestima!
+                Após conhecerem alguns modelos de negócio diferentes, em viagens à Europa e aos EUA, as empresárias Vanessa e Janaina decidiram que era hora de trazer para o Brasil um serviço diferente do que era, até então, conhecido por aqui.
               </Faixa3Texto>
               <Faixa3Texto>
-                Nascida de um sonho das sócias, Janaína e Vanessa, a Escovei possui conceito único de atendimento rápido com padrões pré-definidos e preços fixos, em um ambiente leve e relaxante.
-              </Faixa3Texto>
-              <Faixa3Texto>
-                Agora, fazendo parte do Grupo Magnet, estamos em processo de expansão, com a meta de levar beleza e autocuidado para todos os cantos do Brasil!
+                A Escovei vem com a missão de atender as clientes com um alto padrão de qualidade em um ambiente leve e relaxante, atendendo com agilidade e excelência, sem hora marcada, e o melhor de tudo, preços fixos para todos os tamanhos de cabelo.
               </Faixa3Texto>
 
               <Faixa3LogoGrupoMagnet>
                 <Image
                   src="/images/logo-grupo-magnet.png"
                   width="284"
-                  height="41"
+                  height="60"
                 />
               </Faixa3LogoGrupoMagnet>
 
-              <Faixa3Video>
+              {/* <Faixa3Video>
                 <iframe
                   width="560"
                   height="315"
@@ -52,7 +49,7 @@ function Faixa3({ callForm }: Props) {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
-              </Faixa3Video>
+              </Faixa3Video> */}
 
               <ButtonWrapper>
                 <ButtonPulse

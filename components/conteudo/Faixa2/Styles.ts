@@ -13,6 +13,7 @@ padding-bottom:5rem;
 export const Faixa2Titulo = styled(Title)`
 color:${(props) => props.theme.client.colors.white};
 font-size:35px;
+font-weight:bold;
 text-transform:uppercase;
 
 @media (max-width:900px) {

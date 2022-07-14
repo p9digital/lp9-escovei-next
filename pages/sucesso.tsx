@@ -37,7 +37,7 @@ position: relative;
 const FaixaSucessoModeloContainer = styled(ModeloContainer)`
 bottom:-0.6rem;
 left:80%;
-width:494px;
+width:438px;
 
 @media (max-width: 900px) {
   left:100%;
@@ -107,8 +107,8 @@ function Continue() {
             <Image
               src="/images/faixa1/modelo.png"
               alt="Modelo"
-              width="494"
-              height="570"
+              width="438"
+              height="679"
             />
           </FaixaSucessoModeloContainer>
           <Colunas>

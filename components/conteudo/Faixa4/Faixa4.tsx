@@ -46,10 +46,10 @@ function Faixa4({ callForm }: Props) {
                     />
                   </Faixa4ListaItemIcone>
                   <span>
-                    SERVIÇOS DE
+                    SERVIÇOS
                     {" "}
                     <br />
-                    BELEZA
+                    DE BELEZA
                     {" "}
                     <br />
                     EXPRESS
@@ -67,10 +67,10 @@ function Faixa4({ callForm }: Props) {
                     VENDA DE
                     {" "}
                     <br />
-                    PRODUTOS DA
+                    PRODUTOS
                     {" "}
                     <br />
-                    MARCA
+                    DA MARCA
                     {" "}
                     <br />
                     ESCOVEI

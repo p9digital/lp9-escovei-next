@@ -14,6 +14,7 @@ z-index:2;
 
 export const Faixa5Titulo = styled(Title)`
 font-size:30px;
+font-weight:bold;
 @media (max-width:900px) {
   font-size:25px;
 }

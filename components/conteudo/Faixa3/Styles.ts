@@ -34,11 +34,19 @@ align-items:flex-start;
 display:flex;
 flex-direction:column;
 justify-content:center;
+
+@media (max-width:1300px) {
+  padding-left:5rem;
+}
+@media (max-width:1200px) {
+  padding-left:0;
+}
 `;
 
 export const Faixa3Titulo = styled(Title)`
 color:${(props) => props.theme.client.colors.primary};
 font-size:35px;
+font-weight:bold;
 text-transform:initial;
 
 @media (max-width:900px) {
@@ -53,7 +61,7 @@ text-transform:initial;
 export const Faixa3Texto = styled.p`
 color:white;
 font-size:15px;
-font-weight:500;
+font-weight:300;
 line-height:1.5;
 margin-bottom:2rem;
 
@@ -65,10 +73,11 @@ margin-bottom:2rem;
 `;
 
 export const Faixa3LogoGrupoMagnet = styled.div`
+margin:5rem 0;
 width:284px;
 
 @media (max-width:900px) {
-  margin:auto;
+  margin:5rem auto;
 }
 `;
 
@@ -99,7 +108,7 @@ export const Faixa3Logo = styled.div`
 max-width:793px;
 position:absolute;
 right:0;
-top:50%;
+top:75%;
 transform:translate(-10%, -50%);
 width:38%;
 

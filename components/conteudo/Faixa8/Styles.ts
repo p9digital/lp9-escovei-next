@@ -75,7 +75,7 @@ export const ListaImagens = styled.div`
 display:flex;
 gap:5rem;
 justify-content:space-between;
-margin:0 -10rem 5rem;
+margin:0 -5rem 5rem;
 
 @media (max-width:1200px) {
   margin:0 0 5rem;

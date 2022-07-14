@@ -20,8 +20,8 @@ function Faixa1() {
           <Image
             src="/images/faixa1/modelo.png"
             alt="Modelo"
-            width="494"
-            height="570"
+            width="438"
+            height="679"
           />
         </ModeloContainer>
         <FaixaConteudoResponsive>
@@ -30,10 +30,7 @@ function Faixa1() {
               <Faixa1QuadroBackground />
               <Faixa1QuadroTexto>
                 <Faixa1Titulo fontColor="white" margem="0 0 2rem">
-                  FATURE EM MÉDIA
-                  {" "}
-                  <br />
-                  R$ 1 MILHÃO POR ANO COM SEU SALÃO DE BELEZA EXPRESS
+                  FATURE ATÉ 1 MILHÃO POR ANO COM SEU SALÃO DE BELEZA ESCOVEI
                 </Faixa1Titulo>
               </Faixa1QuadroTexto>
             </Faixa1Quadro>
