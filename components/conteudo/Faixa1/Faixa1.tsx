@@ -30,7 +30,7 @@ function Faixa1() {
               <Faixa1QuadroBackground />
               <Faixa1QuadroTexto>
                 <Faixa1Titulo fontColor="white" margem="0 0 2rem">
-                  FATURE ATÉ 1 MILHÃO POR ANO COM SEU SALÃO DE BELEZA ESCOVEI
+                  FATURE A PARTIR DE 1 MILHÃO POR ANO COM SEU SALÃO DE BELEZA ESCOVEI
                 </Faixa1Titulo>
               </Faixa1QuadroTexto>
             </Faixa1Quadro>
