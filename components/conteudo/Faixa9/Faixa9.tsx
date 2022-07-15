@@ -65,7 +65,7 @@ function Faixa9({ callForm }: Props) {
               <Image
                 src="/images/logo-grupo-magnet.png"
                 width="284"
-                height="41"
+                height="60"
               />
             </Faixa9LogoMagnet>
           </Faixa1Textos>
