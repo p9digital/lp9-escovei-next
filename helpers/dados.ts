@@ -68,8 +68,8 @@ export const whatsapps = [
   {
     id: 1,
     nome: "",
-    link: "5511999999999",
-    numero: "(11) 99999-9999",
+    link: "5511913649826",
+    numero: "(11) 91364-9826",
     email: "",
   },
 ];
